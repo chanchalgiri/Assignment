@@ -6,7 +6,7 @@ function App() {
   const [tableData, setTableData] = useState([]);
 
   const handleAddRow = () => {
-    const newData = [...tableData, { id: Date.now(), name: 'Enter name', age: 'Enter age', email: 'Enter email id' }];
+    const newData = [...tableData, { id: Date.now(), name: '', age: '', email: '' }];
     setTableData(newData);
   };
 
