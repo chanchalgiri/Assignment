@@ -6,7 +6,7 @@ function App() {
   const [tableData, setTableData] = useState([]);
 
   const handleAddRow = () => {
-    const newData = [...tableData, { id: Date.now(), name: '', age: '', email: '' }];
+    const newData = [...tableData, { id: Date.now(), name: 'Enter name', age: 'Enter age', email: 'Enter email id' }];
     setTableData(newData);
   };
 
@@ -45,10 +45,6 @@ function App() {
         <tbody>
           {tableData.map(row => (
             <tr key={row.id}>
-              {/* <td><input type="text" value={row.name} onChange={(e) => handleUpdateRow(row.id, 'name', e.target.value)} /></td>
-              <td><input type="text" value={row.age} onChange={(e) => handleUpdateRow(row.id, 'age', e.target.value)} /></td>
-              <td><input type="text" value={row.email} onChange={(e) => handleUpdateRow(row.id, 'email', e.target.value)} /></td>
-              <td><button onClick={() => handleDeleteRow(row.id)}>Delete</button></td> */}
               <td><input type="text" value={row.name} onChange={(e) => handleUpdateRow(row.id, 'name', e.target.value)} /></td>
               <td><input type="text" value={row.age} onChange={(e) => handleUpdateRow(row.id, 'age', e.target.value)} /></td>
               <td><input type="text" value={row.email} onChange={(e) => handleUpdateRow(row.id, 'email', e.target.value)} /></td>
